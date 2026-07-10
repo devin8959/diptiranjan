@@ -1,0 +1,11 @@
+# Nmap 7.99 scan initiated Fri Jul 10 08:31:58 2026 as: /usr/lib/nmap/nmap --privileged -T5 -vv -oN nomal_scan.txt 192.168.1.80
+Nmap scan report for 192.168.1.80
+Host is up, received reset ttl 255 (0.0024s latency).
+Scanned at 2026-07-10 08:31:58 EDT for 4s
+Not shown: 998 filtered tcp ports (no-response)
+PORT   STATE SERVICE REASON
+21/tcp open  ftp     syn-ack ttl 64
+80/tcp open  http    syn-ack ttl 64
+
+Read data files from: /usr/share/nmap
+# Nmap done at Fri Jul 10 08:32:02 2026 -- 1 IP address (1 host up) scanned in 4.49 seconds
