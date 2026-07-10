@@ -1,0 +1,110 @@
+─(kali㉿kali)-[~]
+└─$ nmap google.com T5
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-07-10 09:11 -0400
+Failed to resolve "T5".
+Nmap scan report for google.com (192.178.158.138)
+Host is up (0.0051s latency).
+Other addresses for google.com (not scanned): 2404:6800:4002:828::200e 192.178.158.139 192.178.158.102 192.178.158.101 192.178.158.113 192.178.158.100
+rDNS record for 192.178.158.138: lcdels-in-f138.1e100.net
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+
+Nmap done: 1 IP address (1 host up) scanned in 5.52 seconds
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ nmap google.com -T5 -O     
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-07-10 09:12 -0400
+Nmap scan report for google.com (192.178.158.138)
+Host is up (0.0084s latency).
+Other addresses for google.com (not scanned): 2404:6800:4002:828::200e 192.178.158.139 192.178.158.102 192.178.158.101 192.178.158.113 192.178.158.100
+rDNS record for 192.178.158.138: lcdels-in-f138.1e100.net
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE
+80/tcp  open  http
+443/tcp open  https
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: bridge|VoIP adapter|general purpose
+Running (JUST GUESSING): Oracle Virtualbox (98%), Slirp (98%), AT&T embedded (95%), QEMU (94%)
+OS CPE: cpe:/o:oracle:virtualbox cpe:/a:danny_gasparovski:slirp cpe:/a:qemu:qemu
+Aggressive OS guesses: Oracle Virtualbox Slirp NAT bridge (98%), AT&T BGW210 voice gateway (95%), QEMU user mode network gateway (94%)
+No exact OS matches for host (test conditions non-ideal).
+
+OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 8.01 seconds
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ nmap google.com -T5 -sV
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-07-10 09:12 -0400
+Stats: 0:00:11 elapsed; 0 hosts completed (1 up), 1 undergoing Service Scan
+Service scan Timing: About 0.00% done
+
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ nmap google.com -T5 -sV -Pn
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-07-10 09:12 -0400
+Nmap scan report for google.com (192.178.158.138)
+Host is up (0.020s latency).
+Other addresses for google.com (not scanned): 2404:6800:4002:828::200e 192.178.158.139 192.178.158.102 192.178.158.101 192.178.158.113 192.178.158.100
+rDNS record for 192.178.158.138: lcdels-in-f138.1e100.net
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      gws
+443/tcp open  ssl/https gws
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.99%I=7%D=7/10%Time=6A50EFE3%P=x86_64-pc-linux-gnu%r(GetR
+SF:equest,1302A,"HTTP/1\.0\x20200\x20OK\r\nContent-Type:\x20text/html;\x20
+SF:charset=ISO-8859-1\r\nDate:\x20Fri,\x2010\x20Jul\x202026\x2013:13:06\x2
+SF:0GMT\r\nExpires:\x20-1\r\nCache-Control:\x20private,\x20max-age=0\r\nCo
+SF:ntent-Security-Policy-Report-Only:\x20object-src\x20'none';base-uri\x20
+SF:'self';script-src\x20'nonce-LreKSa_QG5ijKR6vKI2gxg'\x20'strict-dynamic'
+SF:\x20'report-sample'\x20'unsafe-eval'\x20'unsafe-inline'\x20https:\x20ht
+SF:tp:;report-uri\x20https://csp\.withgoogle\.com/csp/gws/other-hp\r\nP3P:
+SF:\x20CP=\"This\x20is\x20not\x20a\x20P3P\x20policy!\x20See\x20g\.co/p3phe
+SF:lp\x20for\x20more\x20info\.\"\r\nServer:\x20gws\r\nX-XSS-Protection:\x2
+SF:00\r\nX-Frame-Options:\x20SAMEORIGIN\r\nSet-Cookie:\x20__Secure-STRP=AN
+SF:mZwa1ACScPEOMQvh0rbfhVHkVp99yvFBaLYH06a9XaP4WzXlfRfBY-GI-W3qssIywN4kYez
+SF:CjX3gTh59kCfyc50pC4A9dQVeqj;\x20expires=Fri,\x2010-Jul-2026\x2013:18:06
+SF:\x20GMT;\x20path=/;\x20domain=\.google\.com;\x20Secure;\x20SameSite=str
+SF:ict\r\nSet-Cookie:\x20AEC=AdJVEavhaZe2jvwTlOIOXxh3FDNZgJFG4RnBZjKLlQdhX
+SF:do-Omm_87YPWos;\x20expires=Wed,\x2006-Jan-2027\x2013:13:06\x20GMT;\x20p
+SF:ath=/;\x20domain=\.google\.com;\x20Secure;\x20Http")%r(HTTPOptions,6DC,
+SF:"HTTP/1\.0\x20405\x20Method\x20Not\x20Allowed\r\nContent-Type:\x20text/
+SF:html;\x20charset=UTF-8\r\nReferrer-Policy:\x20no-referrer\r\nContent-Le
+SF:ngth:\x201592\r\nDate:\x20Fri,\x2010\x20Jul\x202026\x2013:13:07\x20GMT\
+SF:r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=en>\n\x20\x20<meta\x20charset=
+SF:utf-8>\n\x20\x20<meta\x20name=viewport\x20content=\"initial-scale=1,\x2
+SF:0minimum-scale=1,\x20width=device-width\">\n\x20\x20<title>Error\x20405
+SF:\x20\(Method\x20Not\x20Allowed\)!!1</title>\n\x20\x20<style>\n\x20\x20\
+SF:x20\x20\*{margin:0;padding:0}html,code{font:15px/22px\x20arial,sans-ser
+SF:if}html{background:#fff;color:#222;padding:15px}body{margin:7%\x20auto\
+SF:x200;max-width:390px;min-height:180px;padding:30px\x200\x2015px}\*\x20>
+SF:\x20body{background:url\(//www\.google\.com/images/errors/robot\.png\)\
+SF:x20100%\x205px\x20no-repeat;padding-right:205px}p{margin:11px\x200\x202
+SF:2px;overflow:hidden}ins{color:#777;text-decoration:none}a\x20img{border
+SF::0}@media\x20screen\x20and\x20\(max-width:772px\){body{background:none;
+SF:margin-top:0;max-width:none;padding-right:0}}#logo{background:url\(//ww
+SF:w\.google\.com/images/branding");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.99%T=SSL%I=7%D=7/10%Time=6A50EFE9%P=x86_64-pc-linux-gnu
+SF:%r(GetRequest,73D8,"HTTP/1\.0\x20200\x20OK\r\nContent-Type:\x20text/htm
+SF:l;\x20charset=ISO-8859-1\r\nDate:\x20Fri,\x2010\x20Jul\x202026\x2013:13
+SF::12\x20GMT\r\nExpires:\x20-1\r\nCache-Control:\x20private,\x20max-age=0
+SF:\r\nContent-Security-Policy-Report-Only:\x20object-src\x20'none';base-u
+SF:ri\x20'self';script-src\x20'nonce-C3eA6KGqbTTzv_AaIpes_Q'\x20'strict-dy
+SF:namic'\x20'report-sample'\x20'unsafe-eval'\x20'unsafe-inline'\x20https:
+SF:\x20http:;report-uri\x20https://csp\.withgoogle\.com/csp/gws/other-hp\r
+SF:\nAccept-CH:\x20Sec-CH-Prefers-Color-Scheme\r\nP3P:\x20CP=\"This\x20is\
+SF:x20not\x20a\x20P3P\x20policy!\x20See\x20g\.co/p3phelp\x20for\x20more\x2
+SF:0info\.\"\r\nServer:\x20gws\r\nX-XSS-Protection:\x200\r\nX-Frame-Option
+SF:s:\x20SAMEORIGIN\r\nSet-Cookie:\x20__Secure-STRP=ANmZwa2NztGnIv2r_4vGDw
+SF:lazQi9yfPl5ShhWWdsbKMVdeAqOhN3rVw6HgH5WBi01k_0vK11vDdHiKDvCGw7Qge7z0wwW
+SF:qwpC3Q_;\x20expires=Fri,\x2010-Jul-2026\x2013:18:12\x20GMT;\x20path=/;\
+SF:x20domain=\.google\.com;\x20Secure;\x20SameSite=strict\r\nSet-Cookie:\x
+SF:20AEC=AdJVEatvLPi4YHxwLy8uYdZT6YtUrHbmAEPi9Rt4xzG5oxhBxJ7_-PkGJg;\x20ex
+SF:pires=Wed,\x2006-Jan-2027\x2013:13:12\x20GMT;\x20p");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 72.85 seconds
